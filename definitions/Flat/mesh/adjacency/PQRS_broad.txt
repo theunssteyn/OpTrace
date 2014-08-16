@@ -1,0 +1,4 @@
+(P,Q,R,S)
+(Q,P,R,S)
+(R,P,Q,S)
+(S,P,Q,R)

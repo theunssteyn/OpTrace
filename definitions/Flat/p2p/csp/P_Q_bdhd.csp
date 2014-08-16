@@ -1,0 +1,39 @@
+---------------------------------------
+-- Auto generated CSPM model by OpTrace
+-- HalfDuplex
+-- Input:
+-- {P,Q}
+---------------------------------------
+
+channel Ap,A,Aq
+
+aP = {| Ap |}
+NodeP = ( Ap -> NodeP )
+
+aQ = {| Aq |}
+NodeQ = ( Aq -> NodeQ )
+
+aCPA = {| Ap, A |}
+ChanP_A = (Ap -> (A -> ChanP_A [] ChanP_A)) [] (A -> (Ap -> ChanP_A [] ChanP_A))
+
+aCQA = {| Aq, A |}
+ChanQ_A = (Aq -> (A -> ChanQ_A [] ChanQ_A)) [] (A -> (Aq -> ChanQ_A [] ChanQ_A))
+
+SYSTEM = ( NodeP ||| NodeQ ) [| {Ap, Aq} |] (ChanP_A [ {|Ap,A|} || {|Aq,A|} ] ChanQ_A)
+MAIN = SYSTEM
+
+TRACE_1 = STOP
+assert MAIN [T= TRACE_1
+TRACE_2 = Aq -> A -> STOP
+assert MAIN [T= TRACE_2
+TRACE_3 = Aq -> A -> Ap -> A -> STOP
+assert MAIN [T= TRACE_3
+TRACE_4 = Ap -> A -> STOP
+assert MAIN [T= TRACE_4
+TRACE_5 = Ap -> A -> Aq -> A -> STOP
+assert MAIN [T= TRACE_5
+TRACE_6 = Ap -> A -> Aq -> STOP
+assert MAIN [T= TRACE_6
+TRACE_7 = Aq -> A -> Ap -> STOP
+assert MAIN [T= TRACE_7
+

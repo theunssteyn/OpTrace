@@ -1,0 +1,143 @@
+---------------------------------------
+-- Auto generated CSPM model by OpTrace
+-- Simplex
+-- Input:
+-- (P,Q)
+-- (Q,R)
+-- (R,S)
+---------------------------------------
+
+channel Ap,A,Aq,Bq,B,Br,Cr,C,Cs
+
+aP = {| Ap |}
+NodeP = ( Ap -> NodeP )
+
+aQ = {| Bq,Aq |}
+NodeQ = ( Aq -> NodeQ ) []( Bq -> NodeQ )
+
+aR = {| Cr,Br |}
+NodeR = ( Br -> NodeR ) []( Cr -> NodeR )
+
+aS = {| Cs |}
+NodeS = ( Cs -> NodeS )
+
+aCPA = {| Ap, A |}
+ChanP_A = (Ap -> (A -> ChanP_A [] ChanP_A))
+
+aCQA = {| Aq, A |}
+ChanQ_A = (A -> (Aq -> ChanQ_A [] ChanQ_A))
+
+aCQB = {| Bq, B |}
+ChanQ_B = (Bq -> (B -> ChanQ_B [] ChanQ_B))
+
+aCRB = {| Br, B |}
+ChanR_B = (B -> (Br -> ChanR_B [] ChanR_B))
+
+aCRC = {| Cr, C |}
+ChanR_C = (Cr -> (C -> ChanR_C [] ChanR_C))
+
+aCSC = {| Cs, C |}
+ChanS_C = (C -> (Cs -> ChanS_C [] ChanS_C))
+
+SYSTEM = ( NodeP ||| NodeQ ||| NodeR ||| NodeS ) [| {Ap, Aq, Bq, Br, Cr, Cs} |] (((((ChanP_A [ {|Ap,A|} || {|Aq,A|} ] ChanQ_A) [ {|Ap,A,Aq|} || {|Bq,B|} ] ChanQ_B) [ {|Ap,A,Aq,Bq,B|} || {|Br,B|} ] ChanR_B) [ {|Ap,A,Aq,Bq,B,Br|} || {|Cr,C|} ] ChanR_C) [ {|Ap,A,Aq,Bq,B,Br,Cr,C|} || {|Cs,C|} ] ChanS_C)
+MAIN = SYSTEM
+
+TRACE_1 = STOP
+assert MAIN [T= TRACE_1
+TRACE_2 = Cr -> C -> Cs -> STOP
+assert MAIN [T= TRACE_2
+TRACE_3 = Cr -> C -> STOP
+assert MAIN [T= TRACE_3
+TRACE_4 = Cr -> C -> Cs -> Bq -> B -> STOP
+assert MAIN [T= TRACE_4
+TRACE_5 = Cr -> C -> Bq -> B -> STOP
+assert MAIN [T= TRACE_5
+TRACE_6 = Cr -> C -> Bq -> B -> Cs -> STOP
+assert MAIN [T= TRACE_6
+TRACE_7 = Bq -> B -> STOP
+assert MAIN [T= TRACE_7
+TRACE_8 = Bq -> B -> Cr -> C -> Cs -> STOP
+assert MAIN [T= TRACE_8
+TRACE_9 = Bq -> B -> Cr -> C -> STOP
+assert MAIN [T= TRACE_9
+TRACE_10 = Bq -> B -> Br -> STOP
+assert MAIN [T= TRACE_10
+TRACE_11 = Cr -> C -> Cs -> Bq -> B -> Ap -> A -> STOP
+assert MAIN [T= TRACE_11
+TRACE_12 = Cr -> C -> Bq -> B -> Cs -> Ap -> A -> STOP
+assert MAIN [T= TRACE_12
+TRACE_13 = Cr -> C -> Bq -> B -> Ap -> A -> STOP
+assert MAIN [T= TRACE_13
+TRACE_14 = Cr -> C -> Bq -> B -> Ap -> A -> Cs -> STOP
+assert MAIN [T= TRACE_14
+TRACE_15 = Bq -> B -> Cr -> C -> Cs -> Ap -> A -> STOP
+assert MAIN [T= TRACE_15
+TRACE_16 = Bq -> B -> Cr -> C -> Ap -> A -> STOP
+assert MAIN [T= TRACE_16
+TRACE_17 = Bq -> B -> Cr -> C -> Ap -> A -> Cs -> STOP
+assert MAIN [T= TRACE_17
+TRACE_18 = Bq -> B -> Ap -> A -> STOP
+assert MAIN [T= TRACE_18
+TRACE_19 = Bq -> B -> Ap -> A -> Cr -> C -> Cs -> STOP
+assert MAIN [T= TRACE_19
+TRACE_20 = Bq -> B -> Ap -> A -> Cr -> C -> STOP
+assert MAIN [T= TRACE_20
+TRACE_21 = Bq -> B -> Br -> Ap -> A -> STOP
+assert MAIN [T= TRACE_21
+TRACE_22 = Bq -> B -> Ap -> A -> Br -> STOP
+assert MAIN [T= TRACE_22
+TRACE_23 = Cr -> C -> Cs -> Ap -> A -> STOP
+assert MAIN [T= TRACE_23
+TRACE_24 = Cr -> C -> Ap -> A -> STOP
+assert MAIN [T= TRACE_24
+TRACE_25 = Cr -> C -> Ap -> A -> Cs -> STOP
+assert MAIN [T= TRACE_25
+TRACE_26 = Ap -> A -> STOP
+assert MAIN [T= TRACE_26
+TRACE_27 = Ap -> A -> Cr -> C -> Cs -> STOP
+assert MAIN [T= TRACE_27
+TRACE_28 = Ap -> A -> Cr -> C -> STOP
+assert MAIN [T= TRACE_28
+TRACE_29 = Cr -> C -> Cs -> Ap -> A -> Bq -> B -> STOP
+assert MAIN [T= TRACE_29
+TRACE_30 = Cr -> C -> Ap -> A -> Cs -> Bq -> B -> STOP
+assert MAIN [T= TRACE_30
+TRACE_31 = Cr -> C -> Ap -> A -> Bq -> B -> STOP
+assert MAIN [T= TRACE_31
+TRACE_32 = Cr -> C -> Ap -> A -> Bq -> B -> Cs -> STOP
+assert MAIN [T= TRACE_32
+TRACE_33 = Ap -> A -> Cr -> C -> Cs -> Bq -> B -> STOP
+assert MAIN [T= TRACE_33
+TRACE_34 = Ap -> A -> Cr -> C -> Bq -> B -> STOP
+assert MAIN [T= TRACE_34
+TRACE_35 = Ap -> A -> Cr -> C -> Bq -> B -> Cs -> STOP
+assert MAIN [T= TRACE_35
+TRACE_36 = Ap -> A -> Bq -> B -> STOP
+assert MAIN [T= TRACE_36
+TRACE_37 = Ap -> A -> Bq -> B -> Cr -> C -> Cs -> STOP
+assert MAIN [T= TRACE_37
+TRACE_38 = Ap -> A -> Bq -> B -> Cr -> C -> STOP
+assert MAIN [T= TRACE_38
+TRACE_39 = Ap -> A -> Bq -> B -> Br -> STOP
+assert MAIN [T= TRACE_39
+TRACE_40 = Cr -> C -> Cs -> Ap -> A -> Aq -> STOP
+assert MAIN [T= TRACE_40
+TRACE_41 = Cr -> C -> Ap -> A -> Cs -> Aq -> STOP
+assert MAIN [T= TRACE_41
+TRACE_42 = Cr -> C -> Ap -> A -> Aq -> STOP
+assert MAIN [T= TRACE_42
+TRACE_43 = Cr -> C -> Ap -> A -> Aq -> Cs -> STOP
+assert MAIN [T= TRACE_43
+TRACE_44 = Ap -> A -> Cr -> C -> Cs -> Aq -> STOP
+assert MAIN [T= TRACE_44
+TRACE_45 = Ap -> A -> Cr -> C -> Aq -> STOP
+assert MAIN [T= TRACE_45
+TRACE_46 = Ap -> A -> Cr -> C -> Aq -> Cs -> STOP
+assert MAIN [T= TRACE_46
+TRACE_47 = Ap -> A -> Aq -> STOP
+assert MAIN [T= TRACE_47
+TRACE_48 = Ap -> A -> Aq -> Cr -> C -> Cs -> STOP
+assert MAIN [T= TRACE_48
+TRACE_49 = Ap -> A -> Aq -> Cr -> C -> STOP
+assert MAIN [T= TRACE_49
+

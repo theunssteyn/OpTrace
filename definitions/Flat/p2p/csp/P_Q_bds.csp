@@ -1,0 +1,46 @@
+---------------------------------------
+-- Auto generated CSPM model by OpTrace
+-- Simplex
+-- Input:
+-- (P,Q)
+-- (Q,P)
+---------------------------------------
+
+channel Ap,A,Bp,B,Aq,Bq
+
+aP = {| Ap,Bp |}
+NodeP = ( Ap -> NodeP ) []( Bp -> NodeP )
+
+aQ = {| Bq,Aq |}
+NodeQ = ( Aq -> NodeQ ) []( Bq -> NodeQ )
+
+aCPA = {| Ap, A |}
+ChanP_A = (Ap -> (A -> ChanP_A [] ChanP_A))
+
+aCPB = {| Bp, B |}
+ChanP_B = (B -> (Bp -> ChanP_B [] ChanP_B))
+
+aCQA = {| Aq, A |}
+ChanQ_A = (A -> (Aq -> ChanQ_A [] ChanQ_A))
+
+aCQB = {| Bq, B |}
+ChanQ_B = (Bq -> (B -> ChanQ_B [] ChanQ_B))
+
+SYSTEM = ( NodeP ||| NodeQ ) [| {Ap, Bp, Aq, Bq} |] (((ChanP_A [ {|Ap,A|} || {|Bp,B|} ] ChanP_B) [ {|Ap,A,Bp,B|} || {|Aq,A|} ] ChanQ_A) [ {|Ap,A,Bp,B,Aq|} || {|Bq,B|} ] ChanQ_B)
+MAIN = SYSTEM
+
+TRACE_1 = STOP
+assert MAIN [T= TRACE_1
+TRACE_2 = Bq -> B -> STOP
+assert MAIN [T= TRACE_2
+TRACE_3 = Bq -> B -> Ap -> A -> STOP
+assert MAIN [T= TRACE_3
+TRACE_4 = Ap -> A -> STOP
+assert MAIN [T= TRACE_4
+TRACE_5 = Ap -> A -> Bq -> B -> STOP
+assert MAIN [T= TRACE_5
+TRACE_6 = Ap -> A -> Aq -> STOP
+assert MAIN [T= TRACE_6
+TRACE_7 = Bq -> B -> Bp -> STOP
+assert MAIN [T= TRACE_7
+
