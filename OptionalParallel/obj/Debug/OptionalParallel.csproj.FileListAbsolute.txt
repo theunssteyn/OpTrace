@@ -1,0 +1,10 @@
+C:\Dropbox\Varsity\Masters\Simulator\OptionalParallel\OptionalParallel\bin\Debug\OptionalParallel.exe.config
+C:\Dropbox\Varsity\Masters\Simulator\OptionalParallel\OptionalParallel\bin\Debug\OptionalParallel.exe
+C:\Dropbox\Varsity\Masters\Simulator\OptionalParallel\OptionalParallel\bin\Debug\OptionalParallel.pdb
+C:\Dropbox\Varsity\Masters\Simulator\OptionalParallel\OptionalParallel\obj\Debug\OptionalParallel.csprojResolveAssemblyReference.cache
+C:\Dropbox\Varsity\Masters\Simulator\OptionalParallel\OptionalParallel\obj\Debug\OptionalParallel.Form1.resources
+C:\Dropbox\Varsity\Masters\Simulator\OptionalParallel\OptionalParallel\obj\Debug\OptionalParallel.Properties.Resources.resources
+C:\Dropbox\Varsity\Masters\Simulator\OptionalParallel\OptionalParallel\obj\Debug\OptionalParallel.csproj.GenerateResource.Cache
+C:\Dropbox\Varsity\Masters\Simulator\OptionalParallel\OptionalParallel\obj\Debug\OptionalParallel.exe
+C:\Dropbox\Varsity\Masters\Simulator\OptionalParallel\OptionalParallel\obj\Debug\OptionalParallel.pdb
+C:\Dropbox\Varsity\Masters\Simulator\OptionalParallel\OptionalParallel\obj\Debug\OptionalParallel.MainForm.resources
