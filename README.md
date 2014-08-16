@@ -22,3 +22,5 @@ Input adjacency list:
 The input adjacency list has the following required format:
 {P,Q}
 (P,Q)
+
+Please see the "definitions" for the various input files.
