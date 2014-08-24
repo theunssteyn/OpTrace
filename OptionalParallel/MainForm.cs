@@ -154,7 +154,7 @@ namespace OpTrace
 
                         nodeList = tl.NodeList;
 
-                        /* Enable button */
+                        ClearInput();
 
                         
                     }
@@ -270,6 +270,11 @@ namespace OpTrace
         }
 
         private void buttonClear_Click(object sender, EventArgs e)
+        {
+            ClearInput();
+        }
+
+        private void ClearInput()
         {
             textBoxResPass.Text = "0";
             textBoxResTotal.Text = "0";

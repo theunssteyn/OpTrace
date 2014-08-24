@@ -1,0 +1,10 @@
+C:\Dropbox\Varsity\Masters\Software\Repositories\OpTrace\OptionalParallel\bin\Release\OptionalParallel.exe.config
+C:\Dropbox\Varsity\Masters\Software\Repositories\OpTrace\OptionalParallel\bin\Release\OptionalParallel.exe
+C:\Dropbox\Varsity\Masters\Software\Repositories\OpTrace\OptionalParallel\bin\Release\OptionalParallel.pdb
+C:\Dropbox\Varsity\Masters\Software\Repositories\OpTrace\OptionalParallel\obj\Release\OpTrace.csprojResolveAssemblyReference.cache
+C:\Dropbox\Varsity\Masters\Software\Repositories\OpTrace\OptionalParallel\obj\Release\OpTrace.Form1.resources
+C:\Dropbox\Varsity\Masters\Software\Repositories\OpTrace\OptionalParallel\obj\Release\OpTrace.MainForm.resources
+C:\Dropbox\Varsity\Masters\Software\Repositories\OpTrace\OptionalParallel\obj\Release\OpTrace.Properties.Resources.resources
+C:\Dropbox\Varsity\Masters\Software\Repositories\OpTrace\OptionalParallel\obj\Release\OpTrace.csproj.GenerateResource.Cache
+C:\Dropbox\Varsity\Masters\Software\Repositories\OpTrace\OptionalParallel\obj\Release\OptionalParallel.exe
+C:\Dropbox\Varsity\Masters\Software\Repositories\OpTrace\OptionalParallel\obj\Release\OptionalParallel.pdb

@@ -7,3 +7,6 @@ C:\Dropbox\Varsity\Masters\Simulator\OptionalParallel\OptionalParallel\obj\Debug
 C:\Dropbox\Varsity\Masters\Simulator\OptionalParallel\OptionalParallel\obj\Debug\OpTrace.csproj.GenerateResource.Cache
 C:\Dropbox\Varsity\Masters\Simulator\OptionalParallel\OptionalParallel\obj\Debug\OptionalParallel.exe
 C:\Dropbox\Varsity\Masters\Simulator\OptionalParallel\OptionalParallel\obj\Debug\OptionalParallel.pdb
+C:\Dropbox\Varsity\Masters\Software\Repositories\OpTrace\OptionalParallel\bin\Debug\OptionalParallel.exe.config
+C:\Dropbox\Varsity\Masters\Software\Repositories\OpTrace\OptionalParallel\obj\Debug\OptionalParallel.exe
+C:\Dropbox\Varsity\Masters\Software\Repositories\OpTrace\OptionalParallel\obj\Debug\OptionalParallel.pdb
